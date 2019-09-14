@@ -17,9 +17,16 @@ $webkitRadius : 10em;
 $borderRadius: 10em;
 $font24: 1em;
 $desktop: 840px;
+$large: 1200px;
 
 @mixin desktop {
     @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media (min-width: #{$large}) {
         @content;
     }
 }
@@ -128,7 +135,17 @@ body {
         }
 
         .about-text {
-            line-height: 20px;
+
+            @include desktop {
+                display: flex;
+                flex-wrap: wrap;
+                margin: 30px 60px;
+                font-size: 1.5em;
+            }
+
+            @include large {
+                flex-wrap: nowrap;
+            }
 
             .about-title, .about-subtitle {
                 font-weight: bold;
@@ -154,19 +171,23 @@ body {
                 margin-bottom: 35px;
             }
 
-            .vision {
-
+            .mission-vision {
+                @include desktop {
+                    margin: 30px;
+                }
             }
 
             .core-values {
-
+                @include desktop {
+                    margin: 30px;
+                }
             }
         }
 
     }
 
     .our-services {
-        position: absolute;
+        position: fixed;
         z-index: 105;
         top: 4.5em;
         left: 36%;
@@ -175,7 +196,7 @@ body {
         min-width: 100px;
         height: auto;
         border-radius: 5px;
-        background-color: #d5d5d5;
+        background-color: #f7f7f7;
         border: 1px solid;
 
         .nav-sub-item {
