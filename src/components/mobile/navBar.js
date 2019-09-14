@@ -4,9 +4,9 @@ import Icon from "../utils/icon";
 import toggle from "../../icons/list.svg"
 import Button from "../utils/button";
 import texts from "../../constants/texts";
-import signUpHandler from "../../eventHandlers/signUpModal";
-import menuToggle from "../../eventHandlers/menuToggle";
-import overlayAction from "../../eventHandlers/overlayActions";
+import signUpHandler from "../../events/signUpModal";
+import menuToggle from "../../events/menuToggle";
+import overlayAction from "../../events/overlayActions";
 
 
 class NavBar extends React.Component {
@@ -44,10 +44,10 @@ class NavBar extends React.Component {
             <span className="nav-item" onClick={e => this.servicesToggle(e)}>
               {texts.menuItems[1]}
             </span>
-            <a className="nav-item" href="http://about.rabbii.co.ke/">
+            <a className="nav-item active" href="#" onClick={e => this.menuHandler(e)}>
               {texts.menuItems[2]}
             </a>
-            <a className="nav-item active" href="#" onClick={e => this.menuHandler(e)}>
+            <a className="nav-item" href="http://faqs.rabbii.co.ke/">
               {texts.menuItems[3]}
             </a>
             <a className="nav-item" href="#contacts" onClick={e => this.menuHandler(e)}>
