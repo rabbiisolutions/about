@@ -5,9 +5,9 @@ import React from "react";
 const AboutUs = () => {
   return (
       <div className="about-view">
-        <section className="logo-section"><Logo height={267}/></section>
+        <section className="logo-section"><Logo height={19}/></section>
         <section className="about-text">
-          <section className="mission">
+          <section className="mission-vision">
             <div className="mission">
               <div className="about-title">Our Mission</div>
               <div className="title-description">
@@ -27,7 +27,7 @@ const AboutUs = () => {
           </section>
           <section className="core-values">
             <div className="about-title">Core Values</div>
-            <ol>
+            <ul>
               <li className="about-subtitle">Totality</li>
               <span className="subtitle-description">
                 We consider the interests of all our stakeholders and will seek to
@@ -45,7 +45,7 @@ const AboutUs = () => {
                 To promote the advancement of Technology and Education by
                 developing new, high quality and sustainable solutions to Educational challenges.
               </span>
-            </ol>
+            </ul>
           </section>
         </section>
       </div>
