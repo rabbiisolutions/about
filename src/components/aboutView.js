@@ -1,18 +1,18 @@
 import Logo from "./utils/logo";
 import React from "react";
 import texts from "../constants/texts";
+import BackGround from "../helpers/backGround";
 
 const AboutUs = () => {
   return (
-      <div className="about-view">
+      <div className={"about-view-" + BackGround()}>
         <div className="our-services hidden">
           <a className="nav-sub-item" href="https://www.rabbii.co.ke/#teecha">
             {texts.ourServices[0]}
           </a>
         </div>
-        <div className="overlay">
-          <section className="logo-section"><Logo height={19}/></section>
-          <section className="about-text">
+        <section className="logo-section"><Logo height={19}/></section>
+        <section className="about-text">
           <section className="mission-vision">
             <div className="mission">
               <div className="about-title">Our Mission</div>
@@ -54,7 +54,6 @@ const AboutUs = () => {
             </ul>
           </section>
         </section>
-        </div>
       </div>
   );
 };

@@ -112,10 +112,17 @@ body {
         }
     }
 
-    .about-view {
+    .about-view-webp {
+        background-image: url("../images/about.webp");
+    }
+
+    .about-view-jpeg {
+        background-image: url("../images/about.jpg");
+    }
+
+    .about-view-jpeg, .about-view-webp {
         margin-top: $navBarHeight;
         padding: 20px 25px;
-        background-image: url("../images/about-1.webp");
         background-position: center;
 
         @include desktop {
