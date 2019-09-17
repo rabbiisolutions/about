@@ -10,8 +10,9 @@ const AboutUs = () => {
             {texts.ourServices[0]}
           </a>
         </div>
-        <section className="logo-section"><Logo height={19}/></section>
-        <section className="about-text">
+        <div className="overlay">
+          <section className="logo-section"><Logo height={19}/></section>
+          <section className="about-text">
           <section className="mission-vision">
             <div className="mission">
               <div className="about-title">Our Mission</div>
@@ -53,6 +54,7 @@ const AboutUs = () => {
             </ul>
           </section>
         </section>
+        </div>
       </div>
   );
 };
