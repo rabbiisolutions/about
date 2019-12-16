@@ -1,0 +1,92 @@
+$colors: (
+    // navBar
+        alto: #D3D3D3, mirage: #1B2531, purple: #A600C0,
+        curiosBlue: #27A1DA,
+    // content
+        deepSeaGreen: #0B4B68, deepSeaGreen56: rgba(11, 75, 104, 0.56),
+        mirage80: rgba(27, 37, 49, 0.8), mirage90: rgba(27, 37, 49, 0.9),
+        mirage64: rgba(27, 37, 49, 0.64),mirage74: rgba(27, 37, 49, 0.74),
+        mirage25: rgba(27, 37, 49, 0.25),
+    // borders and accordion
+        silverSand: #BDBFC3, concrete: #F3F3F3, mercury: #E2E2E2,
+    // footer
+        nobel: #B7B7B7,
+    // stars
+        oldGold: #D4AF37, silver: #C4C4C4,
+    // space
+        white: #FFFFFF
+);
+
+@function color($name) {
+    @return map_get($colors, $name);
+}
+
+$pointer: pointer;
+$navBarHeight: 3.5em;
+$webkitRadius : 10em;
+$borderRadius: 10em;
+$font16: 1em;
+
+$desktop: 800px;
+$monitor: 1192px;
+
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+@mixin monitor {
+    @media (max-width: #{$monitor}) {
+        @content;
+    }
+}
+
+
+html {
+    box-sizing: border-box;
+    -ms-overflow-style: scrollbar;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Nunito", sans-serif;
+    width: 100%;
+    color: color(mirage);
+    fill: color(mirage);
+}
+
+a {
+    text-decoration: none;
+    color: color(mirage);
+}
+
+a:hover {
+    text-decoration: underline;
+    color: color(curiosBlue);
+}
+
+button:hover, .btn-link:hover, .social span svg:hover {
+    transform: scale(1.1);
+}
+
+.hidden {
+    display: none;
+}
+
+.page-mask {
+    background: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 50;
+}
+
+main {
+    margin-top: $navBarHeight;
+    padding-top: .5rem;
+    display: block;
+}

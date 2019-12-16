@@ -1,0 +1,32 @@
+$colors: (
+    // content
+        mirage64: rgba(27, 37, 49, 0.64),
+    // footer
+        nobel: #B7B7B7
+);
+
+@function color($name) {
+    @return map_get($colors, $name);
+}
+
+footer {
+    #darken {
+        background: color(nobel);
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 1vw;
+        font-weight: 300;
+
+        a {
+            font-size: 1.125rem;
+            margin-right: 25px;
+        }
+
+        .copyright {
+            color: color(mirage64);
+            font-size: 1.125rem;
+            font-weight: 300;
+        }
+    }
+}

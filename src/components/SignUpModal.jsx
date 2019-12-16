@@ -1,12 +1,13 @@
 import React from "react";
 import ButtonLink from "./basic/ButtonLink.jsx";
-import signUpHandler from "../events/SignUpModal";
+import signUpHandler from "../events/signUpModal";
+import texts from "../constants/texts";
 
-const SignUpModal = (props) => {
+const SignUpModal = () => {
   return (
-      <div className={props.className}>
-        <div className={"close-icon " + props.status} onClick={e => signUpHandler(e)}>&#10006;</div>
-        <div id="sign-up-text">{props.signUpText}</div>
+      <div className={"sign-up modal hidden"}>
+        <div className={"close-icon"} onClick={e => signUpHandler(e)}>&#10006;</div>
+        <div id="sign-up-text">{texts.signUp}</div>
         <section>
           <div className="user-title">
             Sign up as a Client/Parent to get a tutor/Teacher

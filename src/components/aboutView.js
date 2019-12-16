@@ -1,4 +1,4 @@
-import Logo from "./composite/logo";
+import Logo from "./composite/Logo";
 import React from "react";
 import texts from "../constants/texts";
 import BackGround from "../helpers/backGround";

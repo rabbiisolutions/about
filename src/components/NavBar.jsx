@@ -1,12 +1,12 @@
 import React from "react";
-import Logo from "./composite/Logo";
+import Logo from "./composite/Logo.jsx";
 import Icon from "./basic/Icon";
 import toggle from "../icons/menu.svg"
 import Button from "./basic/Button";
-import texts from "../constants/Texts";
-import signUpHandler from "../events/SignUpModal";
-import menuToggle from "../events/MenuToggle";
-import overlayAction from "../events/OverlayActions";
+import texts from "../constants/texts";
+import signUpHandler from "../events/signUpModal";
+import menuToggle from "../events/menuToggle";
+import overlayAction from "../events/overlayActions";
 
 
 class NavBar extends React.Component {
@@ -38,7 +38,7 @@ class NavBar extends React.Component {
         <nav id="nav-bar">
           <Logo className="logo" height={3} units={'rem'}/>
           <span className="nav">
-            <a className="nav-item active" href="#landing-image" onClick={e => this.menuHandler(e)}>
+            <a className="nav-item active" href="#carousel" onClick={e => this.menuHandler(e)}>
                 <span className={'text'}>{texts.menuItems[0]}</span>
               <span className={'active'}>&nbsp;</span>
             </a>
