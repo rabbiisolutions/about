@@ -1,14 +1,14 @@
 import React from "react";
-import Icon from "../utils/icon";
-import phone from "../../icons/social/phone-volume-solid.svg"
-import whatsapp from "../../icons/social/whatsapp-brands.svg"
-import mail from "../../icons/social/gmail.svg"
-import twitter from "../../icons/social/twitter-brands.svg"
-import youtube from "../../icons/social/youtube-brands.svg"
-import facebook from "../../icons/social/facebook-f-brands.svg"
-import linkedin from "../../icons/social/linkedin-in-brands.svg"
-import texts from "../../constants/texts";
-import Logo from "../utils/logo";
+import Icon from "./basic/Icon";
+import phone from "../icons/social/phone-volume-solid.svg"
+import whatsapp from "../icons/social/whatsapp-brands.svg"
+import mail from "../icons/social/gmail.svg"
+import twitter from "../icons/social/twitter-brands.svg"
+import youtube from "../icons/social/youtube-brands.svg"
+import facebook from "../icons/social/facebook-f-brands.svg"
+import linkedin from "../icons/social/linkedin-in-brands.svg"
+import texts from "../constants/texts";
+import Logo from "./composite/logo";
 
 
 const MobileFooter = () => {

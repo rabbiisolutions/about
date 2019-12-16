@@ -2,10 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import AboutUs from "./components/aboutView";
 import backDropHandler from "./events/backDrop";
-import SideBar from "./components/mobile/sideBar";
-import NavBar from "./components/mobile/navBar";
-import MobileFooter from "./components/mobile/footer";
-import SignUpModal from "./components/signUpModal";
+import SideBar from "./components/SideBar";
+import NavBar from "./components/NavBar";
+import MobileFooter from "./components/Footer";
+import SignUpModal from "./components/SignUpModal";
 
 function App() {
   return (

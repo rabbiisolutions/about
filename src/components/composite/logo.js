@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../../icons/logo.svg";
-import Icon from './icon'
+import Icon from '../basic/Icon'
 
 const Logo = (props) => {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
-import texts from "../../constants/texts";
-import menuToggle from "../../events/menuToggle";
+import texts from "../constants/Texts";
+import menuToggle from "../events/MenuToggle";
 
 
 class SideBar extends React.Component {
@@ -39,37 +39,31 @@ class SideBar extends React.Component {
 
   render() {
     return (
-        <div className="menu hidden">
+        <nav className="menu hidden">
           <div className="side-bar">
             <div className="menu-title">{texts.menuTitle}</div>
-            <hr className="menu-divider" />
             <div className="menu-items">
-              <a className="menu-item"  href="https://www.rabbii.co.ke/">
+              <a className="menu-item active"  href="#landing-image" onClick={e => this.menuHandler(e)}>
                 {texts.menuItems[0]}
               </a>
-              <div className="menu-item" onClick={e => this.servicesToggle(e)}>
+              <a className="menu-item" href={'https://catalogue.rabbii.co.ke'}>
                 {texts.menuItems[1]}
-              </div>
-              <div className="services hidden">
-                <a className="menu-sub-item" href="https://www.rabbii.co.ke/#teecha">
-                  {texts.ourServices[0]}
-                </a>
-              </div>
-              <a className="menu-item" href="#" onClick={e => this.menuHandler(e)}>
+              </a>
+              <a className="menu-item" href="https://tuition-jobs.rabbii.co.ke/">
                 {texts.menuItems[2]}
               </a>
-              <a className="menu-item" href="https://faqs.rabbii.co.ke/">
+              <a className="menu-item" href="https://about.rabbii.co.ke/">
                 {texts.menuItems[3]}
               </a>
-              <a className="menu-item" href="#contacts" onClick={e => this.menuHandler(e)}>
+              <a className="menu-item" href="https://trending.rabbii.co.ke/">
                 {texts.menuItems[4]}
               </a>
-              <a className="menu-item" href="https://trending.rabbii.co.ke/">
+              <a className="menu-item" href="https://faqs.rabbii.co.ke/">
                 {texts.menuItems[5]}
               </a>
             </div>
           </div>
-        </div>
+        </nav>
     );
   }
 }
