@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import SignUpModal from "./components/SignUpModal.jsx";
 import Landing from "./components/Landing";
 import About from "./components/About";
+import TeamBoard from "./components/TeamBoard";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <NavBar/>
           <Landing/>
           <About/>
+          <TeamBoard/>
         </main>
         <SideBar/>
         <SignUpModal/>
