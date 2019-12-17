@@ -6,7 +6,7 @@ import './styles/nav-bar.css';
 import './styles/offices.css';
 import './styles/sidebar.css';
 import './styles/signup-modal.css';
-import './styles/statement.css';
+import './styles/about.css';
 import './styles/team.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
