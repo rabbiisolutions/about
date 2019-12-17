@@ -5,11 +5,15 @@ import SideBar from "./components/SideBar";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import SignUpModal from "./components/SignUpModal.jsx";
+import Landing from "./components/Landing";
 
 function App() {
   return (
       <Router>
-        <NavBar/>
+        <main>
+          <NavBar/>
+          <Landing/>
+        </main>
         <SideBar/>
         <SignUpModal/>
         <div className="page-mask hidden" onClick={e => backDropHandler(e)} />

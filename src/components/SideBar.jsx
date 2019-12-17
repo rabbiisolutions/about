@@ -43,7 +43,7 @@ class SideBar extends React.Component {
           <div className="side-bar">
             <div className="menu-title">{texts.menuTitle}</div>
             <div className="menu-items">
-              <a className="menu-item active"  href="#landing-image" onClick={e => this.menuHandler(e)}>
+              <a className="menu-item" href="https://rabbii.co.ke/" onClick={e => this.menuHandler(e)}>
                 {texts.menuItems[0]}
               </a>
               <a className="menu-item" href={'https://catalogue.rabbii.co.ke'}>
@@ -52,7 +52,7 @@ class SideBar extends React.Component {
               <a className="menu-item" href="https://tuition-jobs.rabbii.co.ke/">
                 {texts.menuItems[2]}
               </a>
-              <a className="menu-item" href="https://about.rabbii.co.ke/">
+              <a className="menu-item active" href="#">
                 {texts.menuItems[3]}
               </a>
               <a className="menu-item" href="https://trending.rabbii.co.ke/">

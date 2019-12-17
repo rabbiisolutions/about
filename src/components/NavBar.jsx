@@ -38,9 +38,9 @@ class NavBar extends React.Component {
         <nav id="nav-bar">
           <Logo className="logo" height={3} units={'rem'}/>
           <span className="nav">
-            <a className="nav-item active" href="#carousel" onClick={e => this.menuHandler(e)}>
+            <a className="nav-item" href="https://rabbii.co.ke/" onClick={e => this.menuHandler(e)}>
                 <span className={'text'}>{texts.menuItems[0]}</span>
-              <span className={'active'}>&nbsp;</span>
+              <span className={'active hidden'}>&nbsp;</span>
             </a>
             <a className="nav-item" href="https://catalogue.rabbii.co.ke/">
                 <span className={'text'}>{texts.menuItems[1]}</span>
@@ -50,9 +50,9 @@ class NavBar extends React.Component {
                 <span className={'text'}>{texts.menuItems[2]}</span>
               <span className={'active hidden'}>&nbsp;</span>
             </a>
-            <a className="nav-item"  href="https://about.rabbii.co.ke/">
+            <a className="nav-item active"  href="#">
                 <span className={'text'}>{texts.menuItems[3]}</span>
-              <span className={'active hidden'}>&nbsp;</span>
+              <span className={'active'}>&nbsp;</span>
             </a>
             <a className="nav-item" href="https://trending.rabbii.co.ke/">
                 <span className={'text'}>{texts.menuItems[4]}</span>
