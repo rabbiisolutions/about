@@ -1,11 +1,41 @@
+$desktop: 800px;
+
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
 #team, #board {
     padding: 10% 5%;
+}
+
+#board .col {
+    @include desktop {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+#team .col div {
+    @include desktop {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+#board .col .circle-card:first-child, #team .col .row div:first-child {
+    margin-right: 13vw;
 }
 
 .team-image {
     width: 60%;
     height: auto;
     margin-bottom: .5rem;
+    @include desktop {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
 }
 
 .circle-card {
@@ -13,12 +43,21 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 4rem;
+    @include desktop {
+        margin-bottom: 6rem;
+    }
 
     .name {
         text-transform: capitalize;
         font-size: 1.125rem;
+        @include desktop {
+            font-size: 1.5vw;
+        }
     }
     .title {
         font-weight: 300;
+        @include desktop {
+            font-size: 1.25vw;
+        }
     }
 }

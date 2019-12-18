@@ -22,26 +22,30 @@ const TeamBoard = () => {
       <div id={'team'}>
         <h2 className={'section-title'}>Our Team</h2>
         <div className={'col'}>
-          <CircleCard
-              name={teamBoard.ceo.name}
-              title={teamBoard.ceo.title}
-              jpeg={teamBoard.ceo.jpeg}
-          />
-          <CircleCard
-              name={teamBoard.hr.name}
-              title={teamBoard.hr.title}
-              jpeg={teamBoard.hr.jpeg}
-          />
-          <CircleCard
-              name={teamBoard.cfo.name}
-              title={teamBoard.cfo.title}
-              jpeg={teamBoard.cfo.jpeg}
-          />
-          <CircleCard
-              name={teamBoard.cto.name}
-              title={teamBoard.cto.title}
-              jpeg={teamBoard.cto.jpeg}
-          />
+          <div className={'row'}>
+            <CircleCard
+                name={teamBoard.ceo.name}
+                title={teamBoard.ceo.title}
+                jpeg={teamBoard.ceo.jpeg}
+            />
+            <CircleCard
+                name={teamBoard.hr.name}
+                title={teamBoard.hr.title}
+                jpeg={teamBoard.hr.jpeg}
+            />
+          </div>
+          <div className={'row'}>
+            <CircleCard
+                name={teamBoard.cfo.name}
+                title={teamBoard.cfo.title}
+                jpeg={teamBoard.cfo.jpeg}
+            />
+            <CircleCard
+                name={teamBoard.cto.name}
+                title={teamBoard.cto.title}
+                jpeg={teamBoard.cto.jpeg}
+            />
+          </div>
         </div>
       </div>
       <div id={'board'} className={'dark'}>
