@@ -20,12 +20,29 @@ $desktop: 800px;
 .map-image {
     width: 100%;
     height: auto;
-    margin-bottom: 2rem;
+    margin: 0 4% 2rem;
+    @include desktop {
+        width: 93%;
+    }
 }
 
 #offices {
     padding: 6% 5%;
     font-size: 1.125rem;
+    @include desktop {
+        font-size: 1.75vw;
+        #find-us .lead {
+            text-align: center;
+        }
+        #row {
+            display: flex;
+            justify-content: center;
+        }
+
+        #location {
+            margin-right: 15vw;
+        }
+    }
 }
 
 .lead {
@@ -58,6 +75,9 @@ $desktop: 800px;
 #social {
     display: flex;
     justify-content: space-evenly;
+    @include desktop {
+        justify-content: center;
+    }
 }
 
 footer {

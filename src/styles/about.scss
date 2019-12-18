@@ -27,19 +27,42 @@ $desktop: 800px;
 
 #core-values {
     padding: 6% 5%;
+    //position: relative;
 }
 
 .card-image {
     width: 90%;
     height: auto;
     border-radius: 5px;
+    margin-bottom: .5rem;
+    position: relative;
+    z-index: 5;
+    vertical-align: baseline;
 }
 
 .card {
+    position: relative;
     hr {
         width: 70px;
         border: 2px solid #C656D8;
+        margin-left: 0;
     }
+    margin: 4rem 0;
+}
+
+.card-image:before {
+    background: #C656D8;
+    border-radius: 5px;
+    content: "";
+    display: block;
+    max-width: 476px;
+    max-height: 476px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75%;
+    height: 85%;
+    z-index: 1;
 }
 
 .value-desc {

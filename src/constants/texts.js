@@ -1,5 +1,5 @@
 const signUp = 'Sign Up';
-const contacts = 'Contacts';
+const contacts = 'Contact us on:';
 const findUs = 'Find Us On';
 const safaricom = '0798 884 419';
 const telkom = '0772 915 361';
