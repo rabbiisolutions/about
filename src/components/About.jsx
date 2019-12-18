@@ -26,20 +26,26 @@ const About = () => {
     <section id={'about'}>
       <div id={'statement'}>
         <h2 className={'section-title'}>About Rabbii TS</h2>
-        <p id={'prologue'}>
-          <span id={'focus'}>{statement.mission.start}</span>
-          <span>{statement.mission.end}</span>
-        </p>
-        <p>
-          {statement.about[0]}
-        </p>
-        <p>
-          <span className={'bold'}>{statement.about[1]}</span>
-          {statement.about[2]}
-        </p>
-        <p>
-          {statement.about[3]}
-        </p>
+        <div id={'row'}>
+          <div className={'col'}>
+            <p id={'prologue'}>
+              <span id={'focus'}>{statement.mission.start}</span>
+              <span>{statement.mission.end}</span>
+            </p>
+            <p>
+              {statement.about[0]}
+            </p>
+          </div>
+          <div className={'col'}>
+            <p>
+              <span className={'bold'}>{statement.about[1]}</span>
+              {statement.about[2]}
+            </p>
+            <p>
+              {statement.about[3]}
+            </p>
+          </div>
+        </div>
       </div>
       <div id={'core-values'} className={'dark'}>
         <Card
