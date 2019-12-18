@@ -8,7 +8,7 @@ $colors: (
         mirage64: rgba(27, 37, 49, 0.64),mirage74: rgba(27, 37, 49, 0.74),
         mirage25: rgba(27, 37, 49, 0.25),
     // borders and accordion
-        silverSand: #BDBFC3, concrete: #F3F3F3, mercury: #E2E2E2,
+        silverSand: #BDBFC3, concrete: #F3F3F3, mercury: #E2E2E2, gallery: #ECECEC,
     // footer
         nobel: #B7B7B7,
     // stars
@@ -95,4 +95,21 @@ main {
     font-weight: 300;
     font-size: .8em;
     text-align: center;
+}
+
+.section-title {
+    text-transform: uppercase;
+}
+
+.dark {
+    background-color: color(gallery);
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.team-image:hover, .card-image:hover {
+    transform: scale(1.1);
+    transition: all 1s ease-in-out;
 }

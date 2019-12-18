@@ -4,7 +4,7 @@ import teamBoard from "../constants/team-board";
 
 const CircleCard = (props) => {
   return (
-      <div>
+      <div className={'circle-card'}>
         <ImageWebp
             src={props.jpeg}
             className={'team-image'}
@@ -20,38 +20,44 @@ const TeamBoard = () => {
   return (
     <section>
       <div id={'team'}>
-        <CircleCard
-            name={teamBoard.ceo.name}
-            title={teamBoard.ceo.title}
-            jpeg={teamBoard.ceo.jpeg}
-        />
-        <CircleCard
-            name={teamBoard.hr.name}
-            title={teamBoard.hr.title}
-            jpeg={teamBoard.hr.jpeg}
-        />
-        <CircleCard
-            name={teamBoard.cfo.name}
-            title={teamBoard.cfo.title}
-            jpeg={teamBoard.cfo.jpeg}
-        />
-        <CircleCard
-            name={teamBoard.cto.name}
-            title={teamBoard.cto.title}
-            jpeg={teamBoard.cto.jpeg}
-        />
+        <h2 className={'section-title'}>Our Team</h2>
+        <div className={'col'}>
+          <CircleCard
+              name={teamBoard.ceo.name}
+              title={teamBoard.ceo.title}
+              jpeg={teamBoard.ceo.jpeg}
+          />
+          <CircleCard
+              name={teamBoard.hr.name}
+              title={teamBoard.hr.title}
+              jpeg={teamBoard.hr.jpeg}
+          />
+          <CircleCard
+              name={teamBoard.cfo.name}
+              title={teamBoard.cfo.title}
+              jpeg={teamBoard.cfo.jpeg}
+          />
+          <CircleCard
+              name={teamBoard.cto.name}
+              title={teamBoard.cto.title}
+              jpeg={teamBoard.cto.jpeg}
+          />
+        </div>
       </div>
-      <div id={'board'}>
-        <CircleCard
-            name={teamBoard.ceo.name}
-            title={teamBoard.ceo.title}
-            jpeg={teamBoard.ceo.jpeg}
-        />
-        <CircleCard
-            name={teamBoard.chairman.name}
-            title={teamBoard.chairman.title}
-            jpeg={teamBoard.chairman.jpeg}
-        />
+      <div id={'board'} className={'dark'}>
+        <h2 className={'section-title'}>Board of Directors</h2>
+        <div className={'col'}>
+          <CircleCard
+              name={teamBoard.ceo.name}
+              title={teamBoard.ceo.title}
+              jpeg={teamBoard.ceo.jpeg}
+          />
+          <CircleCard
+              name={teamBoard.chairman.name}
+              title={teamBoard.chairman.title}
+              jpeg={teamBoard.chairman.jpeg}
+          />
+        </div>
       </div>
     </section>
   );

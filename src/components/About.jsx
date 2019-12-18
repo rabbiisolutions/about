@@ -22,24 +22,24 @@ const Card = (props) => {
 const About = () => {
   return (
     <section id={'about'}>
-      <h2 className={'section-title'}>About Rabbi TS</h2>
       <div id={'statement'}>
-        <p>
+        <h2 className={'section-title'}>About Rabbii TS</h2>
+        <p id={'prologue'}>
           <span id={'focus'}>{statement.mission.start}</span>
-          {statement.mission.end}
+          <span>{statement.mission.end}</span>
         </p>
         <p>
           {statement.about[0]}
         </p>
         <p>
-          <span>{statement.about[1]}</span>
+          <span className={'bold'}>{statement.about[1]}</span>
           {statement.about[2]}
         </p>
         <p>
           {statement.about[3]}
         </p>
       </div>
-      <div id={'core-values'}>
+      <div id={'core-values'} className={'dark'}>
         <Card
             jpeg={coreValues.totality.jpeg}
             webp={coreValues.totality.webp}

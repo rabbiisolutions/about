@@ -16,6 +16,7 @@ import linkedin from "../icons/social/circle-linkedin.svg"
 const Offices = () => {
   return (
       <section id={'offices'}>
+        <h2 className={'section-title'}>Our Offices</h2>
         <ImageWebp
             src={mapJpeg}
             srcWebp={mapWebp}
@@ -23,14 +24,14 @@ const Offices = () => {
             alt={'location-map'}
         />
         <div id={'row'}>
-          <div id={'location'}>
+          <div id={'location'} className={'list'}>
             <span className={'lead'}>{location[0]}</span>
             <span className={'address'}>{location[1]}</span>
             <span className={'address'}>{location[2]}</span>
             <span className={'address'}>{location[3]}</span>
             <span className={'address'}>{location[4]}</span>
           </div>
-          <div id={'contacts'}>
+          <div id={'contacts'} className={'list'}>
             <div className="lead">{texts.contacts}</div>
             <div id={'contact-list'}>
               <span className="icon-text">
@@ -41,14 +42,14 @@ const Offices = () => {
                 <Icon src={whatsapp} className="footer-icon" height={3} width={3} units={'rem'}/>
                 <span>{texts.telkom}</span>
               </span>
-              <span className="icon-text">
+              <a className="icon-text" href={'malto:' + texts.sema}>
                 <Icon src={mail} className="footer-icon" height={3} width={3} units={'rem'}/>
                 <span>{texts.sema}</span>
-              </span>
+              </a>
             </div>
           </div>
         </div>
-        <div id="find-us">
+        <div id="find-us" className={'list'}>
           <div className="lead">{texts.findUs}</div>
           <div id="social">
             <a href="https://www.facebook.com/rabbiitech/" target="_blank" rel="noopener noreferrer">

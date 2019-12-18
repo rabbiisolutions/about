@@ -4,7 +4,7 @@ $colors: (
     // content
         deepSeaGreen: #0B4B68,
         mirage64: rgba(27, 37, 49, 0.64),
-        mirage25: rgba(27, 37, 49, 0.25),
+        mirage25: rgba(27, 37, 49, 0.25), gallery: #ECECEC,
     // borders and accordion
         concrete: #F3F3F3
 );
@@ -44,11 +44,21 @@ $navBarHeight: 3.5em;
 
     .menu-item {
         color: color(mirage);
-        padding: 20px 15px;
+        //padding: 20px 15px;
         width: 100%;
         cursor: pointer;
         font-weight: 300;
         font-size: 3vw;
+
+        .text {
+            padding: 20px 15px;
+            display: inline-block;
+        }
+
+        .active {
+            background-color: color(mirage);
+            height: 100%;
+        }
     }
 
     .menu-item.active, .menu-sub-item.active, .menu-item:hover, .menu-sub-item:hover {
@@ -56,5 +66,6 @@ $navBarHeight: 3.5em;
         color: color(deepSeaGreen);
         font-size: 3.5vw;
         text-shadow: 0 3px 4px rgba(0, 0, 0, 0.25);
+        background-color: color(gallery);
     }
 }

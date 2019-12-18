@@ -1,0 +1,24 @@
+#team, #board {
+    padding: 10% 5%;
+}
+
+.team-image {
+    width: 60%;
+    height: auto;
+    margin-bottom: .5rem;
+}
+
+.circle-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem;
+
+    .name {
+        text-transform: capitalize;
+        font-size: 1.125rem;
+    }
+    .title {
+        font-weight: 300;
+    }
+}

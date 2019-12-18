@@ -9,24 +9,93 @@ $colors: (
     @return map_get($colors, $name);
 }
 
+$desktop: 800px;
+
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+.map-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+#offices {
+    padding: 6% 5%;
+    font-size: 1.125rem;
+}
+
+.lead {
+    font-weight: 300;
+}
+
+.address, .lead {
+    display: block;
+    margin: .5rem 0;
+}
+
+.list {
+    margin-bottom: 2rem;
+}
+
+#contact-list {
+    display: flex;
+    flex-direction: column;
+}
+.icon-text {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+    align-items: center;
+}
+.footer-icon {
+    margin-right: 10px;
+}
+
+#social {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 footer {
     #darken {
         background: color(nobel);
         display: flex;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
-        justify-content: flex-end;
-        padding: 1vw;
         font-weight: 300;
+        padding: 6vw 2vw;
 
         a {
-            font-size: 1.125rem;
-            margin-right: 25px;
+            font-size: 4.5vw;
         }
 
         .copyright {
             color: color(mirage64);
-            font-size: 1.125rem;
             font-weight: 300;
+            margin-top: 4vw;
+            font-size: 3.5vw;
+        }
+
+        @include desktop {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            padding: 1vw;
+
+            a {
+                font-size: 1.125rem;
+                margin-right: 25px;
+            }
+
+            .copyright {
+                font-size: 1.125rem;
+                margin-top: 0;
+            }
         }
     }
 }

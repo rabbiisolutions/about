@@ -1,8 +1,8 @@
-import ceoJpeg from "../images/team/ceo.png";
-import hrJpeg from "../images/team/hr.png";
-import cfoJpeg from "../images/team/cfo.png";
-import ctoJpeg from "../images/team/cto.png";
-import chairmanJpeg from "../images/team/chairman.png";
+import ceoJpeg from "../images/team/martin_jodo.png";
+import hrJpeg from "../images/team/glen_magui.png";
+import cfoJpeg from "../images/team/solomon_mwabishi.png";
+import ctoJpeg from "../images/team/wainaina_gichuhi.png";
+import chairmanJpeg from "../images/team/prof_chris_mureithi.png";
 
 
 const ceo = {

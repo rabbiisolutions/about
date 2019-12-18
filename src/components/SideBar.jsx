@@ -44,22 +44,28 @@ class SideBar extends React.Component {
             <div className="menu-title">{texts.menuTitle}</div>
             <div className="menu-items">
               <a className="menu-item" href="https://rabbii.co.ke/" onClick={e => this.menuHandler(e)}>
-                {texts.menuItems[0]}
+                <span className={'active hidden'}>&nbsp;</span>
+                <span className={'text'}>{texts.menuItems[0]}</span>
               </a>
               <a className="menu-item" href={'https://catalogue.rabbii.co.ke'}>
-                {texts.menuItems[1]}
+                <span className={'active hidden'}>&nbsp;</span>
+                <span className={'text'}>{texts.menuItems[1]}</span>
               </a>
               <a className="menu-item" href="https://tuition-jobs.rabbii.co.ke/">
-                {texts.menuItems[2]}
+                <span className={'active hidden'}>&nbsp;</span>
+                <span className={'text'}>{texts.menuItems[2]}</span>
               </a>
               <a className="menu-item active" href="#">
-                {texts.menuItems[3]}
+                <span className={'active'}>&nbsp;</span>
+                <span className={'text'}>{texts.menuItems[3]}</span>
               </a>
               <a className="menu-item" href="https://trending.rabbii.co.ke/">
-                {texts.menuItems[4]}
+                <span className={'active hidden'}>&nbsp;</span>
+                <span className={'text'}>{texts.menuItems[4]}</span>
               </a>
               <a className="menu-item" href="https://faqs.rabbii.co.ke/">
-                {texts.menuItems[5]}
+                <span className={'active hidden'}>&nbsp;</span>
+                <span className={'text'}>{texts.menuItems[5]}</span>
               </a>
             </div>
           </div>
