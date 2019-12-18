@@ -29,6 +29,7 @@ $desktop: 800px;
 #offices {
     padding: 6% 5%;
     font-size: 1.125rem;
+
     @include desktop {
         font-size: 1.5vw;
         #find-us .lead {
@@ -52,6 +53,9 @@ $desktop: 800px;
 .address, .lead {
     display: block;
     margin: .5rem 0;
+    @include desktop {
+        margin: 1rem 0;
+    }
 }
 
 .list {

@@ -25,11 +25,6 @@ $desktop: 800px;
     }
 }
 
-#core-values {
-    padding: 6% 5%;
-    //position: relative;
-}
-
 .card-image {
     width: 90%;
     height: auto;
@@ -38,6 +33,44 @@ $desktop: 800px;
     position: relative;
     z-index: 5;
     vertical-align: baseline;
+    @include desktop {
+        margin-right: 5vw;
+        width: 60%;
+    }
+}
+
+#core-values {
+    padding: 6% 5%;
+    @include desktop {
+        padding: 6% 10%;
+    }
+    .card {
+        @include desktop {
+            display: flex;
+            margin-bottom: 12vw;
+            align-items: center;
+
+            .text {
+                width: 75%;
+            }
+        }
+    }
+    .card:nth-child(2) {
+        @include desktop {
+            flex-direction: row-reverse;
+            .card-image {
+                margin-right: 0;
+                margin-left: 5vw;
+            }
+        }
+    }
+
+    .card:nth-child(3) {
+        @include desktop {
+            margin-bottom: 0;
+        }
+    }
+
 }
 
 .card {
@@ -50,7 +83,7 @@ $desktop: 800px;
     margin: 4rem 0;
 }
 
-.card-image:before {
+.card-image::after {
     background: #C656D8;
     border-radius: 5px;
     content: "";
@@ -67,9 +100,15 @@ $desktop: 800px;
 
 .value-desc {
     font-weight: 300;
+    @include desktop {
+        font-size: 1.5vw;
+    }
 }
 
 .value-title {
     text-transform: capitalize;
     font-size: 1.25rem;
+    @include desktop {
+        font-size: 1.625vw;
+    }
 }

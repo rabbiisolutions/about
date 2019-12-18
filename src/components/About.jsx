@@ -12,10 +12,11 @@ const Card = (props) => {
           className={'card-image'}
           alt={props.alt}
       />
-      <div className={'shade'}/>
-      <div className={'value-title'}>{props.title}</div>
-      <hr className={'divider'}/>
-      <div className="value-desc">{props.text}</div>
+      <div className={'text'}>
+        <div className={'value-title'}>{props.title}</div>
+        <hr className={'divider'}/>
+        <div className="value-desc">{props.text}</div>
+      </div>
     </div>
   );
 };
