@@ -8,6 +8,7 @@ import SignUpModal from "./components/SignUpModal.jsx";
 import Landing from "./components/Landing";
 import About from "./components/About";
 import TeamBoard from "./components/TeamBoard";
+import Offices from "./components/Offices";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Landing/>
           <About/>
           <TeamBoard/>
+          <Offices/>
         </main>
         <SideBar/>
         <SignUpModal/>
