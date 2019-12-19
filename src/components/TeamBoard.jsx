@@ -10,7 +10,7 @@ const CircleCard = (props) => {
             className={'team-image'}
             alt={props.alt}
         />
-        <div className={'name'}>{props.name}</div>
+        <a className={'name'} href={props.link} target="_blank" rel="noopener noreferrer">{props.name}</a>
         <div className={'title'}>{props.title}</div>
       </div>
   );
@@ -39,11 +39,13 @@ const TeamBoard = () => {
                 name={teamBoard.cfo.name}
                 title={teamBoard.cfo.title}
                 jpeg={teamBoard.cfo.jpeg}
+                link={teamBoard.cfo.link}
             />
             <CircleCard
                 name={teamBoard.cto.name}
                 title={teamBoard.cto.title}
                 jpeg={teamBoard.cto.jpeg}
+                link={teamBoard.cto.link}
             />
           </div>
         </div>

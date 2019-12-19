@@ -1,7 +1,14 @@
-$desktop: 800px;
+$desktop: 768px;
+$monitor: 1192px;
 
 @mixin desktop {
     @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+@mixin monitor {
+    @media (min-width: #{$monitor}) {
         @content;
     }
 }
@@ -41,8 +48,11 @@ $desktop: 800px;
                 padding-left: 3px;
                 @include desktop {
                     font-size: 5vw;
-                    padding-top: 14px;
                     padding-right: 14px;
+                }
+
+                @include monitor {
+                    padding-top: 14px;
                 }
             }
         }
@@ -53,10 +63,12 @@ $desktop: 800px;
     width: 90%;
     height: auto;
     border-radius: 5px;
-    margin-bottom: .5rem;
+    margin-bottom: 2rem;
     position: relative;
     z-index: 5;
     vertical-align: baseline;
+    left: 2.25vw;
+    top: 2.25vw;
     @include desktop {
         margin-right: 5vw;
         width: 60%;
@@ -86,6 +98,7 @@ $desktop: 800px;
             .card-image {
                 margin-right: 0;
                 margin-left: 5vw;
+                left: 0;
             }
         }
     }
@@ -105,22 +118,35 @@ $desktop: 800px;
         border: 2px solid #C656D8;
         margin-left: 0;
     }
-    margin: 4rem 0;
+    margin: 6rem 0;
 }
 
-.card-image::after {
+.card::after {
     background: #C656D8;
     border-radius: 5px;
     content: "";
     display: block;
-    max-width: 476px;
-    max-height: 476px;
+    max-width: 56vw;
+    max-height: 44vw;
     position: absolute;
     top: 0;
     left: 0;
-    width: 75%;
+    width: 65%;
     height: 85%;
     z-index: 1;
+
+    @include desktop {
+        max-width: 28vw;
+        max-height: 29.75vw;
+    }
+}
+
+.card:nth-child(2)::after {
+    left: 25vw;
+
+    @include desktop {
+        left: 53.5vw;
+    }
 }
 
 .value-desc {

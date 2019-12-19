@@ -62,11 +62,16 @@ $desktop: 800px;
         border-radius: $borderRadius;
         background-color: color(concrete);
         color: color(purple);
-        border: 2px solid color(purple);
+        border-width: 1px;
+        border-style: solid;
+        border-color: color(purple);
+        @include desktop {
+            border-width: 2px;
+            font-weight: 600;
+        }
         padding: .5em 1.5em;
         cursor: $pointer;
         font-size: $font16;
-        font-weight: 600;
         margin: 8px 0;
     }
 

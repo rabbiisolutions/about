@@ -9,7 +9,8 @@ $colors: (
     @return map_get($colors, $name);
 }
 
-$desktop: 800px;
+$desktop: 768px;
+$monitor: 1192px;
 
 @mixin desktop {
     @media (min-width: #{$desktop}) {
@@ -17,12 +18,18 @@ $desktop: 800px;
     }
 }
 
+@mixin monitor {
+    @media (min-width: #{$monitor}) {
+        @content;
+    }
+}
+
 .map-image {
     width: 100%;
     height: auto;
-    margin: 0 4% 2rem;
+    margin: auto;
     @include desktop {
-        width: 93%;
+        width: 100%;
     }
 }
 
@@ -31,7 +38,7 @@ $desktop: 800px;
     font-size: 1.125rem;
 
     @include desktop {
-        font-size: 1.5vw;
+        font-size: 2vw;
         #find-us .lead {
             text-align: center;
         }
@@ -43,6 +50,9 @@ $desktop: 800px;
         #location {
             margin-right: 15vw;
         }
+    }
+    @include monitor {
+        font-size: 1.5vw;
     }
 }
 
@@ -69,8 +79,11 @@ $desktop: 800px;
 .icon-text {
     display: flex;
     flex-direction: row;
-    margin-bottom: 5px;
     align-items: center;
+
+    @include monitor {
+        margin-bottom: 5px;
+    }
 }
 .footer-icon {
     margin-right: 10px;
@@ -103,6 +116,11 @@ footer {
             font-weight: 300;
             margin-top: 4vw;
             font-size: 3.5vw;
+            @include desktop {
+                font-size: 1.125rem;
+                margin-top: inherit;
+                margin-bottom: inherit;
+            }
         }
 
         @include desktop {
@@ -114,11 +132,6 @@ footer {
             a {
                 font-size: 1.125rem;
                 margin-right: 25px;
-            }
-
-            .copyright {
-                font-size: 1.125rem;
-                margin-top: 0;
             }
         }
     }

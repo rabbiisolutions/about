@@ -1,7 +1,6 @@
 import React from "react";
 import ImageWebp from "../helpers/ImageWebp";
-import mapJpeg from "../images/map.jpg";
-import mapWebp from "../images/map.webp";
+import mapPng from "../images/map.png";
 import location from "../constants/offices";
 import texts from "../constants/texts";
 import Icon from "./basic/Icon";
@@ -18,8 +17,7 @@ const Offices = () => {
       <section id={'offices'}>
         <h2 className={'section-title'}>Our Offices</h2>
         <ImageWebp
-            src={mapJpeg}
-            srcWebp={mapWebp}
+            src={mapPng}
             className={'map-image'}
             alt={'location-map'}
         />

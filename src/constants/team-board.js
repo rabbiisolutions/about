@@ -15,6 +15,7 @@ const cfo = {
   title: 'CFO and CMO',
   name: 'solomon mwabishi',
   jpeg: cfoJpeg,
+  link: 'https://www.linkedin.com/in/solomon-mwabishi-527800113/'
 };
 
 const hr = {
@@ -27,6 +28,7 @@ const cto = {
   title: 'CTO',
   name: 'wainaina gichuhi',
   jpeg: ctoJpeg,
+  link: 'https://www.linkedin.com/in/wainaina-gichuhi-98615a142/'
 };
 
 const chairman = {
