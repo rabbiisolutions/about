@@ -1,4 +1,4 @@
-let location = ['We are located at:', 'Anniversarry Towers,\n',
-  'Mezanine Floor, Office No 5\n', 'P.O Box 132424 - 0100,\n', 'Nairobi, Kenya'];
+let location = ['We are located at:', 'Mezannine Floor\n',
+  'Anniversarry Towers,\n', 'P.O Box 20894 - 00100,\n', 'G.P.O Nairobi, Kenya'];
 
 export default location;
