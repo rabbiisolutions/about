@@ -21,10 +21,10 @@ const zoomOutProperties = {
 
 const Landing = () => {
   return (
-      <div className="slide-container">
+      <div className="slide-container" id={'start'}>
         <Zoom {...zoomOutProperties}>
           {
-            images.map((each, index) => <ImageWebp key={index} style={{width: "100%"}} src={each.jpeg} srcWebp={each.webp}/>)
+            images.map((each, index) => <ImageWebp key={index} style={{width: "100%"}} src={each.jpeg} srcWebp={each.webp} className={'slide-image'}/>)
           }
         </Zoom>
         <div id={'vision'}>{statement.vision}</div>

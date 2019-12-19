@@ -10,24 +10,15 @@ $desktop: 768px;
     padding: 10% 5%;
 }
 
-#board .col {
-    width: 70%;
+#board .col, #team .col .row {
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
 
     @include desktop {
         display: flex;
         justify-content: center;
-    }
-}
-
-#team .col div {
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    @include desktop {
-        display: flex;
-        justify-content: center;
+        width: 70%;
     }
 }
 
@@ -38,11 +29,13 @@ $desktop: 768px;
 }
 
 #team .col .row:nth-child(2) .circle-card, #board .col .circle-card {
-    margin-bottom: 0;
+    @include desktop {
+        margin-bottom: 0;
+    }
 }
 
 .team-image {
-    width: 60%;
+    width: 70%;
     height: auto;
     margin-bottom: .5rem;
     @include desktop {
@@ -56,6 +49,7 @@ $desktop: 768px;
     flex-direction: column;
     align-items: center;
     margin-bottom: 4rem;
+
     @include desktop {
         margin-bottom: 6rem;
     }

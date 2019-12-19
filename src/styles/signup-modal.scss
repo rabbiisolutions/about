@@ -9,10 +9,18 @@ $colors: (
     @return map_get($colors, $name);
 }
 
+$desktop: 768px;
+
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
 .sign-up.modal {
     background-color: white;
     z-index: 1000;
-    width: 60%;
+    width: 90%;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -20,6 +28,10 @@ $colors: (
     max-height: calc(100% - 100px);
     padding: 2vw 2vw 3vw;
     border-radius: 5px;
+
+    @include desktop {
+        width: 60%;
+    }
 
     #tutor-btns {
         justify-content: center;
@@ -41,18 +53,27 @@ $colors: (
     }
 
     .user-title {
-        font-size: 1em;
-        margin: 1vw 0;
+        font-size: .9em;
+        margin: 2vw 0;
         text-transform: lowercase;
         font-weight: 300;
         text-align: center;
+
+        @include desktop {
+            font-size: 1em;
+            margin: 1vw 0;
+        }
     }
 
     section {
         background-color: color(concrete);
         border-radius: 5px;
-        padding: 1px;
-        margin: 0 2vw 2vw;
+        padding: 1px 1px 5px 1px;
+        margin: 0 2vw 3vw;
+        @include desktop {
+            margin: 0 2vw 2vw;
+            padding: 1px;
+        }
     }
 
     #client-btns {

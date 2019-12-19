@@ -123,3 +123,28 @@ main {
     transform: scale(1.1);
     transition: all 1s ease-in-out;
 }
+
+.btn-link {
+    -webkit-border-radius: $webkitRadius;
+    border-radius: $borderRadius;
+    cursor: $pointer;
+    text-decoration: none;
+    font-size: 1.25vw;
+    display: inline-block;
+    border-color: color(curiosBlue);
+    border-style: solid;
+    text-align: center;
+    background-color: color(white);
+    color: color(curiosBlue);
+}
+
+.client-btn, .tutor-btn {
+    padding: .45rem 1.2rem;
+    margin: .5vw 2vw 1.25vw;
+    border-width: 1px;
+    font-size: .9em;
+}
+
+.client-btn:hover, .tutor-btn:hover {
+    border-width: 2px;
+}
