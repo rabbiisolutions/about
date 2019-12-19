@@ -1,7 +1,7 @@
-import totalityJpeg from "../images/values/totality.jpg";
-import totalityWebp from "../images/values/totality.webp";
 import relationshipJpeg from "../images/values/relationship.jpg";
 import relationshipWebp from "../images/values/relationship.webp";
+import totalityJpeg from "../images/values/totality.jpg";
+import totalityWebp from "../images/values/totality.webp";
 import innovationJpeg from "../images/values/innovation.jpg";
 import innovationWebp from "../images/values/innovation.webp";
 
