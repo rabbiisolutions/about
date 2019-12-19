@@ -1,12 +1,21 @@
 import React from "react";
-import slide1Jpeg from "../images/carousel/slideshow-1.jpg";
-import slide1Webp from "../images/carousel/slideshow-1.jpg";
+import pilotJpeg from "../images/carousel/pilot.jpg";
+import pilotWebp from "../images/carousel/pilot.webp";
+import engineerJpeg from "../images/carousel/engineer.jpg";
+import engineerWebp from "../images/carousel/engineer.webp";
+import saxJpeg from "../images/carousel/sax.jpg";
+import saxWebp from "../images/carousel/sax.webp";
+import photographyJpeg from "../images/carousel/photography.jpg";
+import photographyWebp from "../images/carousel/photography.webp";
 import ImageWebp from "../helpers/ImageWebp";
 import { Zoom } from "react-slideshow-image";
 import statement from "../constants/statements";
 
 const images = [
-  {jpeg: slide1Jpeg, webp: slide1Webp}
+  {jpeg: pilotJpeg, webp: pilotWebp},
+  {jpeg: engineerJpeg, webp: engineerWebp},
+  {jpeg: saxJpeg, webp: saxWebp},
+  {jpeg: photographyJpeg, webp: photographyWebp},
 ];
 
 const zoomOutProperties = {
@@ -27,7 +36,7 @@ const Landing = () => {
             images.map((each, index) => <ImageWebp key={index} style={{width: "100%"}} src={each.jpeg} srcWebp={each.webp} className={'slide-image'}/>)
           }
         </Zoom>
-        <div id={'vision'}>{statement.vision}</div>
+        <div id={'vision'}>{statement.tagLine}</div>
       </div>
   )
 };

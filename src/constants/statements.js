@@ -1,3 +1,4 @@
+let tagLine = 'Become what you want!';
 let vision = 'We want to see education transform the \n' +
     'society by empowering them to achieve\n' +
     'their goals and dreams.';
@@ -24,10 +25,10 @@ let about = ['We believe that quality learning is the key \n' +
     'We want to reduce the number of students \n' +
     'who view themselves as failures and have \n' +
     'their career dreams cut short because of poor \n' +
-    'performance. You can help us by sharing with \n' +
-    'anyone who you know needs this info about \n' +
-    'us.'];
+    'performance. You can help achieve our goal by' +
+    ' partnering with us as a parent, student or ' +
+    'teacher, or sharing with friends in need of our help.'];
 
-const statement = {mission: mission, vision: vision, about: about};
+const statement = {mission: mission, vision: vision, about: about, tagLine: tagLine};
 
 export default statement;

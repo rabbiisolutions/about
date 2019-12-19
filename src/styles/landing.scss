@@ -21,14 +21,15 @@ $desktop: 768px;
 
         @include desktop {
             position: absolute;
-            left: 27vw;
-            top: 21vw;
+            left: 35vw;
+            top: 32vw;
             z-index: 5;
-            font-size: 1.5vw;
-            width: 40%;
+            font-size: 2.5vw;
+            width: auto;
             background: rgba(0, 0, 0, 0.38);
             border-radius: 5px;
             color: white;
+            padding: .5vw;
         }
     }
 
