@@ -25,7 +25,9 @@ $desktop: 800px;
 }
 
 #board .col .circle-card:first-child, #team .col .row div:first-child {
-    margin-right: 13vw;
+    @include desktop {
+        margin-right: 13vw;
+    }
 }
 
 .team-image {

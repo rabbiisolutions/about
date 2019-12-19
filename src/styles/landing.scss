@@ -1,5 +1,4 @@
 $desktop: 800px;
-$monitor: 1192px;
 
 @mixin desktop {
     @media (min-width: #{$desktop}) {
@@ -8,7 +7,7 @@ $monitor: 1192px;
 }
 
 .slide-container {
-    width: 99%;
+    width: 98%;
     margin: auto;
 
     #vision {
