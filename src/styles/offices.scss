@@ -42,7 +42,7 @@ $monitor: 1192px;
         #find-us .lead {
             text-align: center;
         }
-        #row {
+        #row-1 {
             display: flex;
             justify-content: center;
         }
@@ -104,15 +104,14 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        font-weight: 300;
         padding: 6vw 2vw;
 
         a {
             font-size: 4.5vw;
+            font-weight: 600;
         }
 
         .copyright {
-            color: color(mirage64);
             font-weight: 300;
             margin-top: 4vw;
             font-size: 3.5vw;

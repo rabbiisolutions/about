@@ -21,7 +21,7 @@ const Offices = () => {
             className={'map-image'}
             alt={'location-map'}
         />
-        <div id={'row'}>
+        <div id={'row-1'}>
           <div id={'location'} className={'list'}>
             <span className={'lead'}>{location[0]}</span>
             <span className={'address'}>{location[1]}</span>
