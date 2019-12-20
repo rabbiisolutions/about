@@ -1,4 +1,6 @@
 import React from "react";
+import presidentJpeg from "../images/carousel/president.jpg";
+import presidentWebp from "../images/carousel/president.webp";
 import pilotJpeg from "../images/carousel/pilot.jpg";
 import pilotWebp from "../images/carousel/pilot.webp";
 import engineerJpeg from "../images/carousel/engineer.jpg";
@@ -16,6 +18,7 @@ const images = [
   {jpeg: engineerJpeg, webp: engineerWebp},
   {jpeg: saxJpeg, webp: saxWebp},
   {jpeg: photographyJpeg, webp: photographyWebp},
+  {jpeg: presidentJpeg, webp: presidentWebp},
 ];
 
 const zoomOutProperties = {
