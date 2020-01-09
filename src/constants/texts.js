@@ -8,11 +8,12 @@ const menuTitle = 'Menu';
 const menuItems = ['Home', 'Our Services', 'Tuition Jobs', 'About Us', 'Trending', 'FAQs'];
 const ourServices = ['TeeCha'];
 const hidden = 'hidden';
+const slogan = 'We Believe Knowledge is Power';
 
 
 const texts = {
   menuTitle: menuTitle, menuItems: menuItems, ourServices: ourServices, hidden: hidden, signUp: signUp,
-  contacts: contacts, findUs: findUs, safaricom: safaricom, telkom: telkom, sema: sema
+  contacts: contacts, findUs: findUs, safaricom: safaricom, telkom: telkom, sema: sema, slogan: slogan
 };
 
 export default texts;
