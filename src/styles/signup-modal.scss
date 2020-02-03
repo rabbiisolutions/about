@@ -27,7 +27,7 @@ $desktop: 768px;
     transform: translate(-50%, -50%);
     max-height: calc(100% - 100px);
     padding: 2vw 2vw 3vw;
-    border-radius: 5px;
+    border-radius: 10px;
 
     @include desktop {
         width: 60%;
@@ -48,7 +48,10 @@ $desktop: 768px;
     #sign-up-text {
         text-align: center;
         font-weight: bold;
-        margin: 1vw 0;
+        margin: 1vw 0 2vw;
+        @include desktop {
+            margin: 1vw 0;
+        }
         font-size: 1.25rem;
     }
 
@@ -67,9 +70,9 @@ $desktop: 768px;
 
     section {
         background-color: color(concrete);
-        border-radius: 5px;
+        border-radius: 10px;
         padding: 1px 1px 5px 1px;
-        margin: 0 2vw 3vw;
+        margin: 0 2vw 5vw;
         @include desktop {
             margin: 0 2vw 2vw;
             padding: 1px;
@@ -86,7 +89,10 @@ $desktop: 768px;
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: start;
+        @include desktop {
+            justify-content: space-evenly;
+        }
         flex-wrap: wrap;
     }
 }

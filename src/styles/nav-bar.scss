@@ -130,6 +130,10 @@ $desktop: 800px;
     }
 
     .toggle {
+        display: flex;
+        justify-content: flex-end;
+        width: 50px;
+        padding: 0 3vw;
         @include desktop {
             display: none;
         }

@@ -65,6 +65,8 @@ a {
 a:hover {
     text-decoration: underline;
     color: color(curiosBlue);
+    background-color: color(white);
+    border-color: color(curiosBlue);
 }
 
 button:hover, .btn-link:hover, .social span svg:hover {
@@ -134,18 +136,28 @@ main {
     text-decoration: none;
     font-size: 1.25vw;
     display: inline-block;
-    border-color: color(curiosBlue);
+    border-color: color(white);
     border-style: solid;
     text-align: center;
-    background-color: color(white);
-    color: color(curiosBlue);
+    background-color: color(curiosBlue);
+    color: color(white);
 }
 
 .client-btn, .tutor-btn {
-    padding: .45rem 1.2rem;
-    margin: .5vw 2vw 1.25vw;
+    padding: .7rem 1.2rem;
+    margin: 3vw 4vw 1.25vw;
+    @include desktop {
+        margin: .5vw 2vw 1.25vw;
+    }
     border-width: 1px;
     font-size: .9em;
+}
+
+.tutor-btn {
+    margin: 3vw 4vw 1.25vw;
+    @include desktop {
+        margin: .5vw 2vw 1.25vw;
+    }
 }
 
 .client-btn:hover, .tutor-btn:hover {
