@@ -1,7 +1,7 @@
 $colors: (
     // navBar
         alto: #D3D3D3, mirage: #1B2531, purple: #A600C0,
-        curiosBlue: #27A1DA,
+        curiosBlue: #27A1DA, alabaster: #FAFAFA,
     // content
         deepSeaGreen: #0B4B68, deepSeaGreen56: rgba(11, 75, 104, 0.56),
         mirage80: rgba(27, 37, 49, 0.8), mirage90: rgba(27, 37, 49, 0.9),
@@ -35,7 +35,7 @@ $desktop: 800px;
 }
 
 #nav-bar {
-    background-color: color(alto);
+    background-color: color(alabaster);
     height: $navBarHeight;
     width: 100%;
     position: fixed;
@@ -60,11 +60,11 @@ $desktop: 800px;
     button {
         -webkit-border-radius: $webkitRadius;
         border-radius: $borderRadius;
-        background-color: color(concrete);
-        color: color(purple);
+        background-color: color(alabaster);
+        color: color(curiosBlue);
         border-width: 1px;
         border-style: solid;
-        border-color: color(purple);
+        border-color: color(curiosBlue);
         @include desktop {
             border-width: 2px;
             font-weight: 600;
@@ -103,7 +103,7 @@ $desktop: 800px;
             }
 
             .active {
-                background-color: color(mirage);
+                background-color: color(curiosBlue);
                 height: 5px;
                 margin-top: 9px;
             }
