@@ -25,7 +25,6 @@ const About = () => {
   return (
     <section id={'about'}>
       <div id={'statement'}>
-        <h2 className={'section-title'}>About Rabbii TS</h2>
         <div id={'row'}>
           <div className={'col'}>
             <p id={'prologue'}>

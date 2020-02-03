@@ -50,21 +50,6 @@ const TeamBoard = () => {
           </div>
         </div>
       </div>
-      <div id={'board'} className={'dark'}>
-        <h2 className={'section-title'}>Board of Directors</h2>
-        <div className={'col'}>
-          <CircleCard
-              name={teamBoard.ceo.name}
-              title={teamBoard.ceo.title}
-              jpeg={teamBoard.ceo.jpeg}
-          />
-          <CircleCard
-              name={teamBoard.chairman.name}
-              title={teamBoard.chairman.title}
-              jpeg={teamBoard.chairman.jpeg}
-          />
-        </div>
-      </div>
     </section>
   );
 };

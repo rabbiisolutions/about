@@ -14,10 +14,10 @@ $monitor: 1192px;
 }
 
 #about {
-    margin-top: 11vw;
+    //margin-top: 11vw;
 
     @include desktop {
-        margin-top: 6vw;
+        margin-top: 0;
     }
 
     #statement {

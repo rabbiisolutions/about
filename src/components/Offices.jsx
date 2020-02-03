@@ -14,7 +14,7 @@ import linkedin from "../icons/social/circle-linkedin.svg"
 
 const Offices = () => {
   return (
-      <section id={'offices'}>
+      <section id={'offices'} className={'dark'}>
         <h2 className={'section-title'}>Our Offices</h2>
         <ImageWebp
             src={mapPng}

@@ -17,7 +17,7 @@ let about = ['We believe that quality learning is the key \n' +
     'much needed in depth personal consultation \n' +
     'and teaching.', 'Rabbii ',
     'was found in April 2019 and has \n' +
-    'been able to help at least 50 students improve \n' +
+    'been able to help hundreds of students improve \n' +
     'in their academics. We want to help more and \n' +
     'look forward to working with you either as a \n' +
     'teacher or a parent to help us achieve this.',
