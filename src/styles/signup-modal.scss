@@ -89,7 +89,7 @@ $desktop: 768px;
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: start;
+        justify-content: flex-start;
         @include desktop {
             justify-content: space-evenly;
         }
