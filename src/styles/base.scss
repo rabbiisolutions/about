@@ -117,7 +117,10 @@ main {
 }
 
 .dark {
-    background-color: color(gallery);
+    background-color: #fafafa;
+    @include desktop {
+        background-color: #EEEEEE;
+    }
 }
 
 .bold {

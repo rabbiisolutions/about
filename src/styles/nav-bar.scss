@@ -45,6 +45,7 @@ $desktop: 800px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
     z-index: 50;
     box-shadow: 0 2px 4px rgba(27, 37, 49, 0.25);
 
@@ -69,8 +70,9 @@ $desktop: 800px;
         @include desktop {
             border-width: 2px;
             font-weight: 600;
+            padding: .5em 1.5em;
         }
-        padding: .5em 1.5em;
+        padding: .4em 1.5em;
         cursor: $pointer;
         font-size: $font16;
         margin: 8px 0;
