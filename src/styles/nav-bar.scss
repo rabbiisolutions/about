@@ -79,7 +79,9 @@ $desktop: 800px;
     }
 
     button:hover {
-        background-color: color(white);
+        background-color: color(curiosBlue);
+        color: color(white);
+        transition: all .5s ease-in-out;
     }
 
     .toggle span{
