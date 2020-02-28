@@ -24,8 +24,8 @@ const hr = {
   jpeg: hrJpeg,
 };
 
-const cto = {
-  title: 'CTO',
+const cio = {
+  title: 'CIO',
   name: 'wainaina gichuhi',
   jpeg: ctoJpeg,
   link: 'https://www.linkedin.com/in/wainaina-gichuhi-98615a142/'
@@ -38,7 +38,7 @@ const chairman = {
 };
 
 let teamBoard = {
-  ceo: ceo, cto: cto, cfo: cfo, hr: hr, chairman: chairman
+  ceo: ceo, cio: cio, cfo: cfo, hr: hr, chairman: chairman
 };
 
 export default teamBoard;

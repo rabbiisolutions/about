@@ -1,12 +1,36 @@
 import React from "react";
-import Logo from "./composite/Logo.jsx";
 import Icon from "./basic/Icon";
 import toggle from "../icons/menu.svg"
 import Button from "./basic/Button";
 import texts from "../constants/texts";
 import signUpHandler from "../events/signUpModal";
 import menuToggle from "../events/menuToggle";
+import logo from "../icons/logo.svg";
+import {useCookies} from "react-cookie";
 
+const Logo = (props) => {
+  return (
+      <a href={texts.menuLinks[0]}>
+        <Icon src={logo} className={props.className} height={props.height} width={props.width} units={props.units}/>
+      </a>
+  );
+};
+
+function Toggle() {
+  // fetch cookies object, set toggled variable (class)
+  const [cookies, setCookie] = useCookies(['toggled']);
+  let toggled = cookies['toggled'] ? '' : 'pulse';
+
+  function toggleHandler () {
+    menuToggle();
+    // set toggled true if not already true
+    if (!cookies['toggled']) setCookie('toggled', true, { path: '/' });
+  }
+
+  return (
+      <Icon src={toggle} className={"toggle " + toggled} height={5.5} width={5} units={'vh'} onClick={e => toggleHandler(e)}/>
+  )
+}
 
 class NavBar extends React.Component {
 
@@ -27,7 +51,7 @@ class NavBar extends React.Component {
                 <span className={'text'}>{texts.menuItems[2]}</span>
               <span className={'active hidden'}>&nbsp;</span>
             </a>
-            <a className="nav-item active"  href="#start">
+            <a className="nav-item active"  href={"#start"}>
                 <span className={'text'}>{texts.menuItems[3]}</span>
               <span className={'active'}>&nbsp;</span>
             </a>
@@ -41,7 +65,9 @@ class NavBar extends React.Component {
             </a>
         </span>
           <Button value={texts.signUp} onClick={e => signUpHandler(e)}/>
-          <Icon src={toggle} className="toggle" height={2.25} width={5} onClick={e => menuToggle(e)}/>
+          <div className={'right'}>
+            <Toggle/>
+          </div>
         </nav>
     );
   }

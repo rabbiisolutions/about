@@ -1,12 +1,12 @@
 $colors: (
     // navBar
-        alto: #D3D3D3, mirage: #1B2531, purple: #A600C0,
-        curiosBlue: #27A1DA, alabaster: #FAFAFA,
+        alabaster: #FAFAFA, mirage: #1B2531, purple: #A600C0,
+        curiosBlue: #27A1DA,
     // content
         deepSeaGreen: #0B4B68, deepSeaGreen56: rgba(11, 75, 104, 0.56),
         mirage80: rgba(27, 37, 49, 0.8), mirage90: rgba(27, 37, 49, 0.9),
         mirage64: rgba(27, 37, 49, 0.64),mirage74: rgba(27, 37, 49, 0.74),
-        mirage25: rgba(27, 37, 49, 0.25),
+        mirage25: rgba(27, 37, 49, 0.25), gallery: #ECECEC,
     // borders and accordion
         silverSand: #BDBFC3, concrete: #F3F3F3, mercury: #E2E2E2,
     // footer
@@ -34,6 +34,14 @@ $desktop: 800px;
     }
 }
 
+$menu: 900px;
+
+@mixin menu {
+    @media (min-width: #{$menu}) {
+        @content;
+    }
+}
+
 #nav-bar {
     background-color: color(alabaster);
     height: $navBarHeight;
@@ -48,6 +56,9 @@ $desktop: 800px;
     align-items: center;
     z-index: 50;
     box-shadow: 0 2px 4px rgba(27, 37, 49, 0.25);
+    @include desktop {
+        align-items: unset;
+    }
 
     .logo {
         display: inline-block; // can't apply max width without inline-block or block
@@ -57,31 +68,6 @@ $desktop: 800px;
     }
     .logo span svg:hover {
         transform: scale(1.1);
-    }
-
-    button {
-        -webkit-border-radius: $webkitRadius;
-        border-radius: $borderRadius;
-        background-color: color(alabaster);
-        color: color(curiosBlue);
-        border-width: 1px;
-        border-style: solid;
-        border-color: color(curiosBlue);
-        @include desktop {
-            border-width: 2px;
-            font-weight: 600;
-            padding: .5em 1.5em;
-        }
-        padding: .4em 1.5em;
-        cursor: $pointer;
-        font-size: $font16;
-        margin: 8px 0;
-    }
-
-    button:hover {
-        background-color: color(curiosBlue);
-        color: color(white);
-        transition: all .5s ease-in-out;
     }
 
     .toggle span{
@@ -119,26 +105,40 @@ $desktop: 800px;
             color: color(deepSeaGreen);
             text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
         }
-    }
-
-    @include desktop {
-        .nav {
-            display: flex;
-            justify-content: space-evenly;
+        .nav-item.active:hover {
+            text-shadow: none;
         }
-
         .nav-item.active {
             color: color(deepSeaGreen);
             font-weight: bold;
         }
     }
 
+    @include menu {
+        .nav {
+            display: flex;
+            justify-content: space-evenly;
+        }
+    }
+
+    .toggle {
+        @include desktop {
+            display: none;
+        }
+    }
+
     .toggle {
         display: flex;
         justify-content: flex-end;
+        width: 6vh;
+        line-height: 15px;
+        padding: 0 8px 0 0;
+    }
+
+    .right {
         width: 50px;
         padding: 0 3vw;
-        @include desktop {
+        @include menu {
             display: none;
         }
     }
@@ -148,5 +148,50 @@ $desktop: 800px;
     }
     .toggle span svg:hover {
         transform: scale(1.1);
+    }
+
+    .pulse {
+        background-color: #EEEEEE;
+        border-radius: 50%;
+        transform: scale(1);
+        animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(0.95);
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.3);
+        }
+
+        70% {
+            transform: scale(1);
+            box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+        }
+
+        100% {
+            transform: scale(0.95);
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        }
+    }
+}
+
+button {
+    -webkit-border-radius: $webkitRadius;
+    border-radius: $borderRadius;
+    background-color: #0071A5;
+    color: #FFFFFF;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #0071A5;
+    @include desktop {
+        border-width: 2px;
+        padding: .5em 1.5em;
+    }
+    padding: .4em 1.5em;
+    cursor: $pointer;
+    font-size: $font16;
+    margin: 8px 0;
+    &:focus {
+        outline: 0 !important;
     }
 }

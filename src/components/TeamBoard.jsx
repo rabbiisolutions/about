@@ -42,10 +42,10 @@ const TeamBoard = () => {
                 link={teamBoard.cfo.link}
             />
             <CircleCard
-                name={teamBoard.cto.name}
-                title={teamBoard.cto.title}
-                jpeg={teamBoard.cto.jpeg}
-                link={teamBoard.cto.link}
+                name={teamBoard.cio.name}
+                title={teamBoard.cio.title}
+                jpeg={teamBoard.cio.jpeg}
+                link={teamBoard.cio.link}
             />
           </div>
         </div>

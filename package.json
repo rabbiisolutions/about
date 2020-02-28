@@ -8,7 +8,8 @@
     "react-dom": "^16.12.0",
     "react-scripts": "^3.4.0",
     "react-slideshow-image": "^1.3.4",
-    "react-svg": "^10.0.26"
+    "react-svg": "^10.0.26",
+    "react-cookie": "latest"
   },
   "scripts": {
     "start": "react-scripts start",
