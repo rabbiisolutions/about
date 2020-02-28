@@ -1,8 +1,8 @@
-import ceoJpeg from "../images/team/martin_jodo.png";
-import hrJpeg from "../images/team/glen_magui.png";
-import cfoJpeg from "../images/team/solomon_mwabishi.png";
-import ctoJpeg from "../images/team/wainaina_gichuhi.png";
-import chairmanJpeg from "../images/team/prof_chris_mureithi.png";
+import ceoJpeg from "../assets/images/team/martin_jodo.png";
+import hrJpeg from "../assets/images/team/glen_magui.png";
+import cfoJpeg from "../assets/images/team/solomon_mwabishi.png";
+import ctoJpeg from "../assets/images/team/wainaina_gichuhi.png";
+import chairmanJpeg from "../assets/images/team/prof_chris_mureithi.png";
 
 
 const ceo = {

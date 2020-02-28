@@ -6,11 +6,11 @@ $desktop: 768px;
     }
 }
 
-#team, #board {
+#team {
     padding: 10% 5%;
 }
 
-#board .col, #team .col .row {
+#team .col .row {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
@@ -22,13 +22,13 @@ $desktop: 768px;
     }
 }
 
-#board .col .circle-card:first-child, #team .col .row div:first-child {
+#team .col .row div:first-child {
     @include desktop {
         margin-right: 13vw;
     }
 }
 
-#team .col .row:nth-child(2) .circle-card, #board .col .circle-card {
+#team .col .row:nth-child(2) .circle-card {
     @include desktop {
         margin-bottom: 0;
     }

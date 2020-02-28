@@ -1,9 +1,9 @@
-import relationshipJpeg from "../images/values/relationship.jpg";
-import relationshipWebp from "../images/values/relationship.webp";
-import totalityJpeg from "../images/values/totality.jpg";
-import totalityWebp from "../images/values/totality.webp";
-import innovationJpeg from "../images/values/innovation.jpg";
-import innovationWebp from "../images/values/innovation.webp";
+import relationshipJpeg from "../assets/images/values/relationship.jpg";
+import relationshipWebp from "../assets/images/values/relationship.webp";
+import totalityJpeg from "../assets/images/values/totality.jpg";
+import totalityWebp from "../assets/images/values/totality.webp";
+import innovationJpeg from "../assets/images/values/innovation.jpg";
+import innovationWebp from "../assets/images/values/innovation.webp";
 
 const totality = {
   title: 'totality',

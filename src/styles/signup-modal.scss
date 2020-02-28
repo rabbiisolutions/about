@@ -1,12 +1,18 @@
 $colors: (
     // content
         mirage64: rgba(27, 37, 49, 0.64),
-    // borders and accordion
-        concrete: #F3F3F3
 );
 
 @function color($name) {
     @return map_get($colors, $name);
+}
+
+$tab: 450px;
+
+@mixin tab {
+    @media (min-width: #{$tab}) {
+        @content;
+    }
 }
 
 $desktop: 768px;
@@ -17,82 +23,165 @@ $desktop: 768px;
     }
 }
 
-.sign-up.modal {
+$monitor: 1024px;
+
+@mixin monitor {
+    @media (min-width: #{$monitor}) {
+        @content;
+    }
+}
+
+$hd: 1330px;
+
+@mixin hd {
+    @media (min-width: #{$hd}) {
+        @content;
+    }
+}
+
+%modals {
     background-color: white;
     z-index: 1000;
-    width: 90%;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-height: calc(100% - 100px);
-    padding: 2vw 2vw 3vw;
-    border-radius: 10px;
-
+    text-align: center;
     @include desktop {
-        width: 60%;
+        top: 35%;
+    }
+    @include monitor {
+        top: 50%;
+    }
+}
+%header {
+    font-weight: bold;
+    margin: 1vw 0 2vw;
+    @include desktop {
+        margin: 1vw 0;
+        font-size: 1.5rem;
+    }
+    font-size: 1.25rem;
+}
+
+%p {
+    background-color: #FAFAFA;
+}
+
+%headers {
+    @extend %p;
+    border-radius: 5px 5px 0 0;
+}
+
+%footers {
+    @extend %p;
+    border-radius: 0 0 5px 5px;
+}
+%close {
+    right: 10px;
+    top: 5px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.sign-up-modal {
+    @extend %modals;
+    width: 90%;
+    border-radius: 5px;
+    max-height: calc(100% - 100px);
+
+    @include tab {
+        width: 70%;
+    }
+    @include desktop {
+        width: 50%;
+    }
+    @include monitor {
+        width: 40%;
+    }
+    @include hd {
+        width: 30%;
     }
 
-    #tutor-btns {
-        justify-content: center;
+    .header {
+        @extend %headers;
+        padding: 2vh;
+    }
+    .footer {
+        @extend %footers;
+        padding: 2vh;
     }
 
     .close-icon {
-        right: 10px;
-        top: 5px;
-        position: absolute;
-        cursor: pointer;
-        color: color(mirage64);
+        @extend %close;
     }
 
     #sign-up-text {
-        text-align: center;
-        font-weight: bold;
-        margin: 1vw 0 2vw;
-        @include desktop {
-            margin: 1vw 0;
-        }
-        font-size: 1.25rem;
+        @extend %header;
     }
 
     .user-title {
         font-size: .9em;
-        margin: 2vw 0;
-        text-transform: lowercase;
-        font-weight: 300;
-        text-align: center;
-
+        margin: 2vw 0 3vw 3vh;
+        text-transform: capitalize;
+        font-weight: 600;
+        text-align: left;
+        color: rgba(27, 37, 49, 0.74);
         @include desktop {
-            font-size: 1em;
-            margin: 1vw 0;
+            font-size: 1.0125em;
+            margin: 0 0 2vw 7vw;
+        }
+        @include monitor {
+            margin-left: 5vw;
+            margin-bottom: 1.5vw;
         }
     }
 
-    section {
-        background-color: color(concrete);
-        border-radius: 10px;
-        padding: 1px 1px 5px 1px;
-        margin: 0 2vw 5vw;
+    .content {
+        padding: 2vh 1vh 4vh;
         @include desktop {
-            margin: 0 2vw 2vw;
-            padding: 1px;
+            padding: 2vh 0;
+        }
+        @include monitor {
+            padding: 4vh 0;
+        }
+        &:nth-child(1) {
+            border-bottom: 1px solid #eeeeee;
         }
     }
 
-    #client-btns {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .btn-link, button {
+        border-color: #0071A5;
+        color: #0071A5;
+        background-color: #FFFFFF;
+        font-weight: bold;
+        font-size: 1rem !important;
+        &:hover {
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #0071A5;
+            transition: all .5s ease-in-out;
+        }
     }
 
-    #tutor-btns {
+    button {
+        transition: none !important;
+        transform: none !important;
+    }
+
+    %group {
         display: flex;
-        flex-direction: row;
-        align-items: center;
         justify-content: flex-start;
+        align-items: center;
+    }
+
+    #client-btns, #tutor-btns {
+        @extend %group;
         @include desktop {
-            justify-content: space-evenly;
+            margin-left: 4vw;
         }
-        flex-wrap: wrap;
+        @include monitor {
+            margin-left: 3vw;
+        }
     }
 }

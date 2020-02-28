@@ -1,11 +1,11 @@
 import React from "react";
 import Icon from "./basic/Icon";
-import toggle from "../icons/menu.svg"
+import toggle from "../assets/icons/menu.svg"
 import Button from "./basic/Button";
 import texts from "../constants/texts";
 import signUpHandler from "../events/signUpModal";
 import menuToggle from "../events/menuToggle";
-import logo from "../icons/logo.svg";
+import logo from "../assets/icons/logo.svg";
 import {useCookies} from "react-cookie";
 
 const Logo = (props) => {

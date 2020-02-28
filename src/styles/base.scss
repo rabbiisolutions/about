@@ -67,7 +67,7 @@ a:hover {
     color: #0071A5;
 }
 
-button:hover, .btn-link:hover, .social span svg:hover {
+button:hover, .social span svg:hover {
     transform: scale(1.1);
 }
 
@@ -159,8 +159,4 @@ main {
     @include desktop {
         margin: .5vw 2vw 1.25vw;
     }
-}
-
-.client-btn:hover, .tutor-btn:hover {
-    border-width: 2px;
 }

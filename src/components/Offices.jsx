@@ -1,16 +1,16 @@
 import React from "react";
 import ImageWebp from "../helpers/ImageWebp";
-import mapPng from "../images/map.png";
+import mapPng from "../assets/images/map.png";
 import location from "../constants/offices";
 import texts from "../constants/texts";
 import Icon from "./basic/Icon";
-import phone from "../icons/contacts/ic_round-perm-phone-msgphone.svg"
-import whatsapp from "../icons/contacts/bx_bxl-whatsappwhatsapp.svg"
-import mail from "../icons/contacts/bx_bx-mail-sendmail.svg"
-import twitter from "../icons/social/circle-twitter.svg"
-import youtube from "../icons/social/circle-youtube.svg"
-import facebook from "../icons/social/circle-facebook.svg"
-import linkedin from "../icons/social/circle-linkedin.svg"
+import phone from "../assets/icons/contacts/ic_round-perm-phone-msgphone.svg"
+import whatsapp from "../assets/icons/contacts/bx_bxl-whatsappwhatsapp.svg"
+import mail from "../assets/icons/contacts/bx_bx-mail-sendmail.svg"
+import twitter from "../assets/icons/social/circle-twitter.svg"
+import youtube from "../assets/icons/social/circle-youtube.svg"
+import facebook from "../assets/icons/social/circle-facebook.svg"
+import linkedin from "../assets/icons/social/circle-linkedin.svg"
 
 const Offices = () => {
   return (

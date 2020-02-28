@@ -1,9 +1,9 @@
 import React from "react";
 import Icon from "./basic/Icon";
-import bulb from "../icons/idea.svg"
+import bulb from "../assets/icons/idea.svg"
 import texts from "../constants/texts";
-import landingJ from "../images/landing.jpg";
-import landingW from "../images/landing.webp";
+import landingJ from "../assets/images/landing.jpg";
+import landingW from "../assets/images/landing.webp";
 import ImageWebp from "../helpers/ImageWebp";
 
 function Landing() {
