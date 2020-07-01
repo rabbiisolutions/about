@@ -24,12 +24,12 @@ class SideBar extends React.Component {
                 <span className={'activated hidden'}>&nbsp;</span>
                 <span className={'text'}>{texts.menuItems[1]}</span>
               </a>
-              <a className="menu-item" href={texts.menuLinks[2]}>
-                <span className={'activated hidden'}>&nbsp;</span>
+              <a className="menu-item active" href={"#start"} onClick={e => this.menuHandler(e)}>
+                <span className={'activated'}>&nbsp;</span>
                 <span className={'text'}>{texts.menuItems[2]}</span>
               </a>
-              <a className="menu-item active" href="#start" onClick={e => this.menuHandler(e)}>
-                <span className={'activated'}>&nbsp;</span>
+              <a className="menu-item" href={texts.menuLinks[2]}>
+                <span className={'activated hidden'}>&nbsp;</span>
                 <span className={'text'}>{texts.menuItems[3]}</span>
               </a>
               <a className="menu-item" href={texts.menuLinks[3]}>
